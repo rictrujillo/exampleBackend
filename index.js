@@ -14,7 +14,7 @@ const conexion = {
   }
 
 console.log("RT::", conexion)
-const connection = mysql.createConnection(c);
+const connection = mysql.createConnection(conexion);
 
 // Conectar a la base de datos
 connection.connect(err => {
