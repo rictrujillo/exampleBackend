@@ -1,8 +1,19 @@
 const express = require('express');
 const mysql = require('mysql2');
+const cors = requrie('cors')
 
 const app = express();
+
+const corsOptions = {
+    origin: "*",
+    methods: 'GET,POST,PUT,DELETE',
+    allowedHeaders: 'Content-Type,Authorization',
+  };
+
+app.use(cors(corsOptions))
 const PORT = 3000;
+
+
 
 // Configuración de la base de datos
 const conexion = {
